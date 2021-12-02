@@ -1,13 +1,10 @@
 import React, {useState} from 'react'
 import { AddCategory } from './components/AddCategory'
+import { GifGrid } from './components/GifGrid'
 
 export const GifApp = () => {
 
-    const [categories, setCategories] = useState([' React', 'React Native', 'Next']);
-
-    //const handleAdd = () => {
-      //  setCategories([...categories, 'JavaScript']);
-    //}
+    const [categories, setCategories] = useState([' React']);
 
     return (
         <>
@@ -19,7 +16,8 @@ export const GifApp = () => {
             <ol>
                 {
                     categories.map(category => {
-                        return <li key={category}>{category}</li>
+                        //return <li key={category}>{category}</li>
+                        return <GifGrid key={category} category = {category}/>
                     })
             }   
             </ol>
