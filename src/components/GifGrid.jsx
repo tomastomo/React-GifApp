@@ -8,10 +8,10 @@ export const GifGrid = ({category}) => {
     // Al ponerle :images le cambiamos el nombre para utilizar images en lugar de data
     return (
         <>
-            <h3>{category}</h3>
+            <h3 className="animate__animated animate__bounce">{category}</h3>
             
             <div className="card-grid">
-                {loading && <p>Loading...</p>}
+                {loading && <p className="animate__animated animate__flash">Loading...</p>}
                 {
                     images.map( img => (
                         <GifGridItem key={img.id} img={img}/>
