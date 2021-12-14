@@ -20,7 +20,7 @@ export const AddCategory = ({setCategories}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={inputValue} onChange={ (handleInputChange)}/>
+            <input type="text" value={inputValue} placeholder="Write here text to search" onChange={ (handleInputChange)}/>
         </form>
     )
 }
